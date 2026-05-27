@@ -7,6 +7,30 @@
     font-family: "Supermercado One", sans-serif;
 }
 
+:root {
+    --cor-texto: #fafafa;
+    --bg-imagem: url('../assets/background.jpg');
+    --main-border: 1px solid #fafafa;
+    --main-bg: linear-gradient(#29292980, #c9b4c180);
+    --link-border: 1px solid #fafafa80;
+    --link-bg: #2b2b2b80;
+    --link-texto: gray;
+    --link-bg-hover: #2b2b2b;
+    --btn-troca-bg: #fafafa20;
+}
+
+body.light {
+    --cor-texto: #fafafa;
+    --bg-imagem: url('../assets/background-light.jpg');
+    --main-border: 1px solid #1a1a1a;
+    --main-bg: linear-gradient(#fafafa20, #1a1a1a);
+    --link-border: 1px solid #1a1a1a;
+    --link-bg: #fafafa;
+    --link-texto: #1a1a1a;
+    --link-bg-hover: #d1d1d1;
+    --btn-troca-bg: #1a1a1a20;
+}
+
 h1,
 h2,
 h3,
@@ -17,7 +41,7 @@ h4 {
 body {
     width: 100%;
     height: 100dvh;
-    background-image: url('../assets/charlesdeluvio-pcZvxrAyYoQ-unsplash.jpg');
+    background-image: var(--bg-imagem);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -28,8 +52,8 @@ body {
 main {
     width: 300px;
     padding: 4.75rem 1rem 1rem 1rem;
-    border: 1px solid #fafafa80;
-    background-image: linear-gradient(#29292980, #c9b4c180);
+    border: var(--main-border);
+    background-image: var(--main-bg);
     backdrop-filter: blur(2px);
     position: relative;
     border-radius: 2rem;
@@ -109,10 +133,10 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: .5rem;
-                border: 1px solid #fafafa80;
+                border: var(--link-border);
                 border-radius: .5rem;
-                border-color: #2b2b2b80;
-                color: gray;
+                background-color: var(--link-bg);
+                color: var(--link-texto);
                 text-decoration: none;
                 transition: 300ms;
 
@@ -122,7 +146,7 @@ main {
 
                 &:hover {
                     transform: scale(1.05);
-                    background-color: #2b2b2b;
+                    background-color: var(--link-bg-hover);
 
                 }
             }
@@ -130,4 +154,22 @@ main {
 
     }
 
+}
+
+#trocaTema {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: var(--main-border);
+    background-color: var(--btn-troca-bg);
+    color: var(--cor-texto);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: 300ms all;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
