@@ -9,9 +9,9 @@
 
 :root {
     --cor-texto: #fafafa;
-    --bg-imagem: url('../assets/background.jpg');
+    --bg-imagem: url('../assets/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
     --main-border: 1px solid #fafafa;
-    --main-bg: linear-gradient(#29292980, #c9b4c180);
+    --main-bg: linear-gradient(#2b2b2b, #c9b4c180);
     --link-border: 1px solid #fafafa80;
     --link-bg: #2b2b2b80;
     --link-texto: gray;
@@ -21,7 +21,7 @@
 
 body.light {
     --cor-texto: #fafafa;
-    --bg-imagem: url('../assets/background-light.jpg');
+    --bg-imagem: url('../assets/annie-spratt-OTy0mkqc2Yk-unsplash.jpg');
     --main-border: 1px solid #1a1a1a;
     --main-bg: linear-gradient(#fafafa20, #1a1a1a);
     --link-border: 1px solid #1a1a1a;
